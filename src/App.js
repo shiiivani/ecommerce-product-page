@@ -44,11 +44,11 @@ function App() {
     }
   }, [cartItems, items])
 
-  useEffect(() => {
-    let total = 0
-    total = 125 * items
-    setTotalPrice(total)
-  }, [items])
+  // useEffect(() => {
+  //   let total = 0
+  //   total = 125 * items
+  //   setTotalPrice(total)
+  // }, [items])
 
   function showSideBar() {
     setSideBar(!sideBar);
@@ -67,6 +67,9 @@ function App() {
     if (items == 0) {
       setShowItemNumbers(false);
     }
+    let total = 0
+    total = 125 * items
+    setTotalPrice(total)
   }
 
   function cart() {
