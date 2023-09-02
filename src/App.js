@@ -35,14 +35,14 @@ function App() {
   const [showCartItems, setShowCartItems] = useState(false)
   const [showCartContainer, setShowCartContainer] = useState(false)
   const [totalPrice, setTotalPrice] = useState(0)
-  useEffect(() => {
-    if (cartItems > 0) {
-      setShowCartItems(true)
-    }
-    if (items == 0) {
-      setShowCartItems(false)
-    }
-  }, [cartItems, items])
+  // useEffect(() => {
+  //   if (cartItems > 0) {
+  //     setShowCartItems(true)
+  //   }
+  //   if (items == 0) {
+  //     setShowCartItems(false)
+  //   }
+  // }, [cartItems, items])
 
   // useEffect(() => {
   //   let total = 0
@@ -67,6 +67,13 @@ function App() {
     if (items == 0) {
       setShowItemNumbers(false);
     }
+
+    if (cartItems > 0) {
+          setShowCartItems(true)
+        }
+        if (items == 0) {
+          setShowCartItems(false)
+        }
     let total = 0
     total = 125 * items
     setTotalPrice(total)

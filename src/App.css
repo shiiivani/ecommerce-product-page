@@ -801,3 +801,7 @@ cursor: pointer
   }
 } */
 
+.mainImage a {
+  height: 20px;
+}
+
